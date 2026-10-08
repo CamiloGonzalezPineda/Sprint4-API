@@ -1,0 +1,351 @@
+{
+  "info": {
+    "_postman_id": "4df0c2a8-2fdd-4d51-9ed1-7b3d5532d008",
+    "name": "Casos de prueba UG-3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56261245",
+    "_collection_link": "https://go.postman.co/collection/56261245-4df0c2a8-2fdd-4d51-9ed1-7b3d5532d008?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Crear carrito de compras",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productsList\": [\n    {\n      \"productId\": 1,\n      \"quantity\": 2\n    },\n    {\n      \"productId\": 5,\n      \"quantity\": 2\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear carrito con formato invalido",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productsList\": [\n    {\n      \"productId\": 1\n   \n    },\n    {\n      \"productId\": 5\n     \n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Agregar nuevo Producto a carrito existente",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productsList\": [\n    {\n      \"productId\": 3,\n      \"quantity\": 2\n    }\n  ]\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders/8",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar cantidad de producto  en carrito de compras existente",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productsList\": [\n    {\n      \"productId\":5,\n      \"quantity\": 4\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders/8",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Agregar Producto a un carrito inexistente",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productsList\": [\n    {\n      \"productId\": 3,\n      \"quantity\": 2\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders/200",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "200"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar carrito inexistente",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productsList\": [\n    {\n      \"productId\": 1,\n      \"quantity\": 4\n    },\n    {\n      \"productId\": 5,\n      \"quantity\": 4\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders/40",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "40"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Usuario",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"firstName\": \"Max\",\n  \"phone\": \"+10005553535\",\n  \"address\": \"8042 Lancaster Ave.Hamburg, NY\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url-base}}/api/v1/users",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Solicitar producto con Authorization: Bearer {authToken}",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders/14",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "14"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Solicitar Produucto sin  Authorization: Bearer {authToken}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productsList\": [\n    {\n      \"productId\":5,\n      \"quantity\": 4\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders/14",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "14"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar Carrito de compras existente",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders/4",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Confirmar pedido con Authorization: Bearer {authToken}",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders/6/complete",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "6",
+            "complete"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Confirmar pedido sin Authorization: Bearer {authToken}",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{url-base}}/api/v1/orders/10/complete",
+          "host": [
+            "{{url-base}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "10",
+            "complete"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
