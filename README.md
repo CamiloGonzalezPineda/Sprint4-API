@@ -32,7 +32,7 @@ Durante el proyecto se realizaron pruebas sobre:
 
 Los casos de prueba, resultados de ejecución y documentación correspondiente al proyecto se encuentran en el siguiente archivo:
 
-📄 **[Casos de prueba — Urban Grocers (Excel)](https://docs.google.com/spreadsheets/d/1W8Kjz6eQOWPSmVZ2HZkRyXPO1lS8Zpy4/edit?usp=sharing&ouid=106691349693826056792&rtpof=true&sd=true)**
+📄 **[Casos de prueba — Urban Grocers ](https://docs.google.com/spreadsheets/d/1uyZFP4yfIex54KF_C0QpfbGSR88kjCkU/edit?usp=sharing&ouid=106691349693826056792&rtpof=true&sd=true)**
 
 El archivo contiene los casos diseñados para los módulos:
 
